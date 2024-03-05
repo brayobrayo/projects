@@ -1,0 +1,13 @@
+body {
+   background-color: seagreen;
+   background-image:url("Brian.jpg");
+   background-size:cover ;
+   background-position: center;
+       }
+ button{
+    width: 100%;
+    background-color: blue;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+       }
