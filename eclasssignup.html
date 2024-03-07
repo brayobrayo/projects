@@ -3,27 +3,28 @@
 
 <head>
   <meta charset="UTF-8">
-  <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   
     <title>ECLASS SIGN UP</title>
 <link rel="stylesheet" href="eclass.css">
 </head>
-<form action="#" name="studentLogon" enctype="multipart/form-data" method="post"> 
+ 
 <fieldset>
 <body><center>
   <h1><i>E-learning sign up</i></h1>
-<div><form action=""></form>Name <br /> 
-    <input required="text"><br />
+<div> Name <br /> 
+    <input required="text" id="name"><br />
     Surname<br /> 
-    <input required="text"><br />
+    <input required="text" id="surname"><br />
     Date of birth<br />
-    <input required="date"><br />
+    <input required="date" type="date"><br />
     Phone number<br />
-    <input required="number"><br />
+    <input required ="number" id="phone"><br />
     
     
       
-   <button>Sign up</button><br />
+   <button onclick="welcomeUser()">Sign up</button><br />
+   <p id="welcomeMessage"></p>
 </div>
 </fieldset>
    <div>
@@ -32,6 +33,16 @@
    <b>Already have an account?</b><a href="eclasslogin.html"><i>login</i></a>
     </center><br />
     <a href="index.html">Student portal </a>
+    <script>
+    
+      function welcomeUser() {
+          var name = document.getElementById("name").value;
+          var surname = document.getElementById("surname").value;
+          var phone = document.getElementById("phone").value;
+          var welcomeMessage = "Welcome, " + name + " "+surname+" of phone number "+phone+"!";
+          document.getElementById("welcomeMessage").textContent = welcomeMessage;
+      }
+      </script>
 </body>
 
 </html>
