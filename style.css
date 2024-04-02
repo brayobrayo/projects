@@ -1,13 +1,16 @@
 body {
-   background-color: seagreen;
-   
-   background-size:cover ;
-   background-position: center;
-       }
- button{
-    width: 25%;
-    background-color: blue;
-    color: #fff;
-    padding: 10px;
-    margin-top: 10px;
-       }
+      background-color: skyblue;
+    }
+
+    button {
+      width: 30%;
+      height: 30px;
+      background-color: blue;
+      color: #fff;
+      border-radius: 50px;
+    }
+
+    input[type="date"] {
+      width: 10%;
+      height: 30px;
+    }
