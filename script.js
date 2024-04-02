@@ -1,5 +1,4 @@
-  
-    function welcomeUser() {
+ function welcomeUser() {
       var traintype = document.getElementById("traintype").value;
       var origin = document.getElementById("origin").value;
       var destination = document.getElementById("destination").value;
