@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-    <title>ECLASS SIGN UP</title>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <script src="script.js"></script> 
+  <title>ONLINE TRAIN BOOKING</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
- 
-<fieldset>
-<body><center>
-  <h1><i>E-learning sign up</i></h1>
-<div> Name <br /> 
-    <input required="text" id="name"><br />
-    Surname<br /> 
-    <input required="text" id="surname"><br />
-    Date of birth<br />
-    <input required="date" type="date"><br />
-    Phone number<br />
-    <input required ="number" id="phone"><br />
-    
-    
-      
-   <button onclick="welcomeUser()">SUBMIT</button><br />
-   <p id="welcomeMessage"></p>
-</div>
-</fieldset>
-   <div>
-   By clicking sign up button above you agree to our <a href="https://www.safaricom.co.ke">Terms and conditions </a> and accept  our <a href="https://www.kplc.co.ke">Privacy policy </a>
-    </div>
-   <b>Already have an account?</b><a href="eclasslogin.html"><i>login</i></a>
-    </center><br />
-    <a href="index.html">Student portal </a>
+<body>
+  <center>
+    <h1>Book Your Train Tickets</h1>
+    <h2>Select Train Type</h2>
+    <select id="traintype">
+      <option>INTER-COUNTY</option>
+      <option>EXPRESS</option>
+    </select>
   
-</body>
+    <h3>Select Origin</h3>
+    <select id="origin">
+      <option>MUTITU TERMINUS</option>
+      <option>STAGE ONE</option>
+      <option>STAGE TWO</option>
+      <option>STAGE THREE</option>
+      <option>STAGE FOUR</option>
+      <option>STAGE FIVE</option>
+      <option>STAGE SIX</option>
+      <option>STAGE SEVEN</option>
+      <option>KOMU TERMINUS</option>
+    </select>
+    
+    <h3>Select Destination</h3>
+    <select id="destination">
+      <option>MUTITU TERMINUS</option>
+      <option>STAGE ONE</option>
+      <option>STAGE TWO</option>
+      <option>STAGE THREE</option>
+      <option>STAGE FOUR</option>
+      <option>STAGE FIVE</option> 
+      <option>STAGE SIX</option>
+      <option>STAGE SEVEN</option>
+      <option>KOMU TERMINUS</option>
+    </select> 
+    
+    <h3>Date of Departure</h3>
+    <input type="date" id="date"><br />
+    <button onclick="welcomeUser()" type="button">SUBMIT</button>
+    <p id="welcomeMessage"></p>
 
+    <p>By clicking BOOK TRAIN above you agree to the <a class="links" href="#">Terms and Conditions</a> and <a class="links" href="#">Privacy Policy</a></p>
+  </center>
+
+ 
+</body>
 </html>
