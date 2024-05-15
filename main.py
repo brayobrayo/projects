@@ -1,21 +1,25 @@
-x = input("Enter a number: ")
-y = input("Enter a second number: ")
+# Prompt for user to enter numbers
+x = int(input("Enter a number: "))
+y = int(input("Enter a second number: "))
 
-# Corrected variable names
-sum = int(x) + int(y)
-difference = int(x) - int(y)
-product = int(x) * int(y)
-quotient = int(x) / int(y)
-print("1:addition, 2:subtraction, 3:multiplication, 4:division")
-choice = input("Enter your operation (1-4): ")
+# Declaring the operations
+sum = x + y
+difference = x - y
+product = x * y
+quotient = x / y
+
+print("1: Addition, 2: Subtraction, 3: Multiplication, 4: Division")
+
+# Selecting an operation
+choice = int(input("Enter your operation (1-4): "))
 
 if choice == 1:
-    print("Sum:", sum)
+    print("The sum is:", sum)
 elif choice == 2:
-    print("Difference:", difference)
+    print("The difference is:", difference)
 elif choice == 3:
-    print("Product:", product)
+    print("The product is:", product)
 elif choice == 4:
-    print("Quotient:", quotient)
+    print("The quotient is:", quotient)
 else:
     print("Invalid operation")
