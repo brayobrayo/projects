@@ -1,0 +1,77 @@
+body {
+    background-color: rgb(19, 201, 80); /* Primary background color */
+    text-align: center; /* Center text */
+    background-image: url("image1.png"); /* Background image */
+    background-repeat: no-repeat; /* No repeat of the image */
+    background-size: cover; /* Cover the whole background */
+    background-position: center; /* Center the background image */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Set a font-family for consistency */
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start; /* Align children to the left */
+    align-items: center; /* Center children vertically */
+    height: 100vh; /* Full viewport height */
+    padding: 20px; /* Optional padding around the container */
+}
+
+.login_form {
+    max-width: 500px; /* Maximum width for the form */
+    width: 100%; /* Full width up to the max-width */
+    padding: 20px; /* Padding inside the form */
+    border: 1px solid rgb(19, 201, 80); /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #ffffff; /* White background for form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better depth */
+}
+
+h2 {
+    color: rgb(19, 201, 80); /* Match heading color with border color */
+}
+
+label {
+    display: block; /* Make labels block to ensure they are on their own line */
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold; /* Make labels bold */
+}
+
+input[type="text"], 
+input[type="password"], 
+input[type="number"], 
+input[type="tel"] {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px; /* Padding inside the input fields */
+    margin-bottom: 10px; /* Space below each input field */
+    border: 1px solid #ddd; /* Light border color */
+    border-radius: 4px; /* Rounded corners for inputs */
+}
+
+button {
+    background-color: rgb(19, 201, 80); /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 4px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for the button */
+}
+
+button:hover {
+    background-color: rgb(14, 152, 60); /* Darker shade on hover */
+}
+
+p {
+    color: #333; /* Text color for paragraphs */
+    font-size: 14px; /* Font size for better readability */
+}
+
+a {
+    color: rgb(19, 201, 80); /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover for links */
+}

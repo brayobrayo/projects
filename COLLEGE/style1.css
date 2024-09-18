@@ -1,0 +1,81 @@
+body{
+    text-align: center;
+    background-image: url(image1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    display: flex;
+    justify-content:center;
+    height: 700px;
+}
+.login_form{
+    width: 500px;
+    border: 1px solid rgb(19, 201, 80);
+    border-radius: 8px;
+    background-color: rgb(226, 222, 214);
+    padding:20px;
+}
+input[type="text"],
+input[type="password"],
+input[type="tel"]{
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    color: rgb(14, 41, 196);
+    background-color: chartreuse;
+
+}
+button{
+    background-color: chartreuse;
+    width: 200px;
+    border-radius: 100px;
+    color: rgb(14, 41, 196);
+    padding: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(207, 55, 28);
+}
+label{
+    margin-bottom: 10px;
+    color: rgb(14, 41, 196);
+    display: block;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /*overflow: hidden;*/
+    background-color: #333;
+  }
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .navigation{
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar1{
+    display: flex;
+    justify-content: flex-start;
+  }
+  .navbar2{
+    display: flex;
+  }
+  .navbar3{
+    display: flex;
+    justify-content: end;
+   
+    background-color: blue;
+ }
+ 
+ 
