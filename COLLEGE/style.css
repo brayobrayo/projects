@@ -1,77 +1,86 @@
-body {
-    background-color: rgb(19, 201, 80); /* Primary background color */
-    text-align: center; /* Center text */
-    background-image: url("image1.png"); /* Background image */
-    background-repeat: no-repeat; /* No repeat of the image */
-    background-size: cover; /* Cover the whole background */
-    background-position: center; /* Center the background image */
-    margin: 0; /* Remove default margin */
-    font-family: Arial, sans-serif; /* Set a font-family for consistency */
+body{
+    text-align: center;
+    background-image: url(image1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-.container {
+.name{
     display: flex;
-    justify-content: flex-start; /* Align children to the left */
-    align-items: center; /* Center children vertically */
-    height: 100vh; /* Full viewport height */
-    padding: 20px; /* Optional padding around the container */
+    justify-content: flex-start;
 }
+.container{
+    display: flex;
+    justify-content:center;
+    height: 700px;
+}
+.login_form{
+    width: 500px;
+    border: 1px solid rgb(19, 201, 80);
+    border-radius: 8px;
+    background-color: rgb(226, 222, 214);
+    padding:20px;
+}
+input[type="text"],
+input[type="password"],
+input[type="tel"]{
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    color: rgb(14, 41, 196);
+    background-color: chartreuse;
 
-.login_form {
-    max-width: 500px; /* Maximum width for the form */
-    width: 100%; /* Full width up to the max-width */
-    padding: 20px; /* Padding inside the form */
-    border: 1px solid rgb(19, 201, 80); /* Border color */
-    border-radius: 8px; /* Rounded corners */
-    background-color: #ffffff; /* White background for form */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better depth */
 }
-
-h2 {
-    color: rgb(19, 201, 80); /* Match heading color with border color */
+button{
+    background-color: chartreuse;
+    width: 200px;
+    border-radius: 100px;
+    color: rgb(14, 41, 196);
+    padding: 10px;
+    cursor: pointer;
 }
-
-label {
-    display: block; /* Make labels block to ensure they are on their own line */
-    margin-bottom: 5px; /* Space between label and input */
-    font-weight: bold; /* Make labels bold */
+button:hover{
+    background-color: rgb(207, 55, 28);
 }
-
-input[type="text"], 
-input[type="password"], 
-input[type="number"], 
-input[type="tel"] {
-    width: calc(100% - 20px); /* Full width minus padding */
-    padding: 10px; /* Padding inside the input fields */
-    margin-bottom: 10px; /* Space below each input field */
-    border: 1px solid #ddd; /* Light border color */
-    border-radius: 4px; /* Rounded corners for inputs */
+label{
+    margin-bottom: 10px;
+    color: rgb(14, 41, 196);
+    display: block;
 }
-
-button {
-    background-color: rgb(19, 201, 80); /* Button background color */
-    color: #ffffff; /* Button text color */
-    border: none; /* Remove default border */
-    padding: 10px 20px; /* Padding inside the button */
-    border-radius: 4px; /* Rounded corners for the button */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 16px; /* Font size for the button */
-}
-
-button:hover {
-    background-color: rgb(14, 152, 60); /* Darker shade on hover */
-}
-
-p {
-    color: #333; /* Text color for paragraphs */
-    font-size: 14px; /* Font size for better readability */
-}
-
-a {
-    color: rgb(19, 201, 80); /* Link color */
-    text-decoration: none; /* Remove underline */
-}
-
-a:hover {
-    text-decoration: underline; /* Underline on hover for links */
-}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+   }
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .navigation{
+    display: flex;
+    justify-content: space-between;
+    background-color: blue;
+  }
+   .navbar2{
+    display: flex;
+    justify-content: start;
+    background-color: blue;
+  }
+  .navbar3{
+    display: flex;
+    justify-content: end;
+   
+    background-color: blue;
+ }
+ 
+ .paragraph{
+    display: flex;
+    justify-content: flex-start;
+ }
