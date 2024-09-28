@@ -1,86 +1,120 @@
-body{
+body {
     text-align: center;
     background-image: url(image1.png);
     background-repeat: no-repeat;
     background-size: cover;
+    word-wrap: break-word;
 }
-.name{
+
+.name {
     display: flex;
     justify-content: flex-start;
 }
-.container{
+
+.container {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     height: 700px;
 }
-.login_form{
-    width: 500px;
+
+.login_form {
+    width: 90%;
+    max-width: 500px;
     border: 1px solid rgb(19, 201, 80);
     border-radius: 8px;
     background-color: rgb(226, 222, 214);
-    padding:20px;
+    padding: 20px;
 }
+
 input[type="text"],
 input[type="password"],
-input[type="tel"]{
+input[type="tel"] {
     padding: 10px;
     border-radius: 20px;
     margin-bottom: 20px;
-    color: rgb(14, 41, 196);
-    background-color: chartreuse;
-
+    color: white;
+    background-color: coral;
 }
-button{
-    background-color: chartreuse;
+
+button {
+    background-color: coral;
     width: 200px;
     border-radius: 100px;
     color: rgb(14, 41, 196);
     padding: 10px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
-button:hover{
+
+button:hover {
     background-color: rgb(207, 55, 28);
 }
-label{
+
+label {
     margin-bottom: 10px;
     color: rgb(14, 41, 196);
     display: block;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-   }
-  li {
+}
+
+li {
     float: left;
-  }
-  
-  li a {
+}
+
+li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
-  .navigation{
+}
+
+.navigation {
     display: flex;
     justify-content: space-between;
-    background-color: blue;
-  }
-   .navbar2{
+    border-radius: 20px;
+    background-color: orange;
+}
+
+.navbar1,
+.navbar2 {
     display: flex;
-    justify-content: start;
-    background-color: blue;
-  }
-  .navbar3{
-    display: flex;
-    justify-content: end;
-   
-    background-color: blue;
- }
- 
- .paragraph{
+    background-color: orange;
+    border-radius: 10px;
+}
+
+.paragraph {
     display: flex;
     justify-content: flex-start;
- }
+}
+
+.contact {
+    text-align: left;
+}
+
+section {
+    display: none;
+    margin: 10px;
+    padding: 10px;
+    height: auto;
+    background-color: coral;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+}
