@@ -1,9 +1,7 @@
 body {
-    text-align: center;
-    background-image: url(image1.png);
+    background-image: url(imayge1.png);
     background-repeat: no-repeat;
     background-size: cover;
-    word-wrap: break-word;
 }
 
 .name {
@@ -15,6 +13,7 @@ body {
     display: flex;
     justify-content: center;
     height: 700px;
+    text-align: center;
 }
 
 .login_form {
@@ -74,13 +73,30 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
 }
+nav-button {
+margin-right: 10px;
+    display: inline-block;
+    background-color: white;
+    color: blue;
+    padding: 10px;
+    text-decoration: none;
+    border: none; 
+    cursor: pointer;
+    border-radius: 10px;
+}
 
+/* navigation bar */
 .navigation {
     display: flex;
     justify-content: space-between;
     border-radius: 20px;
     background-color: orange;
+    padding: 10px;
+    padding-bottom: 5px;
+    width: 400px;
+    align-items: center;
 }
+
 
 .navbar1,
 .navbar2 {
