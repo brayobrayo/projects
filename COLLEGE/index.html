@@ -8,98 +8,100 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-   
-   <nav class="navigation">
-    <div class="navbar1">
-       <nav-button onclick="showSection('home')">Home</nav-button>
-       <nav-button onclick="showSection('about')">About </nav-button>
-       <nav-button onclick="showSection('contacts')">Contact</nav-button>
-    </div>
-    <div class="navbar2">
-      <nav-button onclick="showSection('login')">Login</nav-button>
-      <nav-button onclick="showSection('signup')">Signup </nav-button>
-    </div>
-</nav>
+    <nav class="navigation">
+        <div class="navbar1">
+            <button onclick="showSection('home')">Home</button>
+            <button onclick="showSection('about')">About</button>
+            <button onclick="showSection('contacts')">Contact</button>
+        </div>
+        <div class="navbar2">
+            <button onclick="showSection('login')">Login</button>
+            <button onclick="showSection('signup')">Signup</button>
+        </div>
+    </nav>
 
-    <section id="home" class="active">
-        <p>Welcome to SuperSchool, the home of studies!</p>
-    </section>
-    
-    <section id="about">
-       <h2>Departments and programs</h2>
-       <h3>Departments</h3>
-    <ul>
-      <li>Department of Computing </li>
-     <li>Department of Electronics </li>
-    </ul>
-    <h3>Programs</h3>
-    <ul>
-      <li>Information technology </li>
-      <li>Computing and informatics</li>
-      <li>Digital electronics </li>
-    </ul>
-    </section>
-    
-  <section id="contacts" class="contact">
-   <p>Follow our social media pages</p>
-        
-      <a href="http://www.facebook.com">Facebook</a><br/>
-      <a href="https://www.instagram.com">Instagram</a></a><br/>
-      <a href="http://www.tiktok.com">TikTok</a><br/>
-  
-        
-        <p>Telephone Contacts</p>
-        <ul>
-        <li>+254723283858</li><br/>
-        <li>+254724824949</li>
-        </ul>
-        <p>Physical Address </p>
-        <div>Peak House off Kamakis road</div>
-   </section>
-    
-    <section id="login">
-        <div class="container">
-            <form class="login_form">
-                <h2>Login to SuperSchool</h2>
-                <div>
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
-                </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                </div>
-                <button type="submit">Login</button>
-            </form>
-        </div>
-    </section>
-    
-    <section id="signup">
-        <div class="container">
-            <form class="login_form">
-                <h2>Signup to SuperSchool</h2>
-                <div>
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                </div>
-                <div>
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-                </div>
-                <div>
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" placeholder="Choose a username" required>
-                </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Choose a password" required>
-                </div>
-                <button type="submit">Sign Up</button>
-                <p>By clicking "Sign Up" you agree to our <a href="#" style="color: rgb(8, 79, 112);">Terms and Conditions</a> and accept our <a href="#" style="color: rgb(8, 79, 112);">Privacy Policy</a>.</p>
-            </form>
-        </div>
-    </section>
-    
+    <div>
+        <section id="home" class="active">
+            <p>Welcome to SuperSchool, the home of studies!</p>
+        </section>
+    </div>
+    <div>
+        <section id="about">
+            <h2>Departments and Programs</h2>
+            <h3>Departments</h3>
+            <ul>
+                <li>Department of Computing</li>
+                <li>Department of Electronics</li>
+            </ul>
+            <h3>Programs</h3>
+            <ul>
+                <li>Information Technology</li>
+                <li>Computing and Informatics</li>
+                <li>Digital Electronics</li>
+            </ul>
+        </section>
+    </div>
+    <div>
+        <section id="contacts" class="contact">
+            <p>Follow our social media pages:</p>
+            <a href="http://www.facebook.com">Facebook</a><br/>
+            <a href="https://www.instagram.com">Instagram</a><br/>
+            <a href="http://www.tiktok.com">TikTok</a><br/>
+            <p>Telephone Contacts:</p>
+            <ul>
+                <li>+254723283858</li>
+                <li>+254724824949</li>
+            </ul>
+            <p>Physical Address:</p>
+            <div>Peak House off Kamakis road</div>
+        </section>
+    </div>
+    <div>
+        <section id="login">
+            <div class="container">
+                <form class="login_form">
+                    <h2>Login to SuperSchool</h2>
+                    <div>
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    <div>
+        <section id="signup">
+            <div class="container">
+                <form class="login_form">
+                    <h2>Signup to SuperSchool</h2>
+                    <div>
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div>
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Choose a username" required>
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Choose a password" required>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                    <p>By clicking "Sign Up" you agree to our <a href="#" style="color: rgb(8, 79, 112);">Terms and Conditions</a> and accept our <a href="#" style="color: rgb(8, 79, 112);">Privacy Policy</a>.</p>
+                </form>
+            </div>
+        </section>
+    </div>
+
     <script>
         function showSection(sectionId) {
             const sections = document.querySelectorAll('section');
@@ -110,4 +112,4 @@
         }
     </script>
 </body>
-          </html>
+</html>
