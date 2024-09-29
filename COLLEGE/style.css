@@ -1,12 +1,7 @@
 body {
-    background-image: url(imayge1.png);
+    background-image: url(image1.png);
     background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.name {
-    display: flex;
-    justify-content: flex-start;
+    /* background-size: cover; */
 }
 
 .container {
@@ -51,75 +46,28 @@ button:hover {
 
 label {
     margin-bottom: 10px;
-    color: rgb(14, 41, 196);
-    display: block;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-nav-button {
-margin-right: 10px;
-    display: inline-block;
-    background-color: white;
     color: blue;
-    padding: 10px;
-    text-decoration: none;
-    border: none; 
-    cursor: pointer;
-    border-radius: 10px;
+    display: block; /* new content starts in next line */
 }
 
-/* navigation bar */
 .navigation {
     display: flex;
     justify-content: space-between;
     border-radius: 20px;
-    background-color: orange;
+    background-color: yellowgreen;
     padding: 10px;
     padding-bottom: 5px;
     width: 400px;
     align-items: center;
 }
 
-
-.navbar1,
-.navbar2 {
-    display: flex;
-    background-color: orange;
-    border-radius: 10px;
-}
-
-.paragraph {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.contact {
-    text-align: left;
-}
-
 section {
     display: none;
     margin: 10px;
     padding: 10px;
-    height: auto;
-    background-color: coral;
+    height: 100%;
+    width: 100%;
+    background-color: yellow;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -131,6 +79,6 @@ section.active {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        height: auto;
+        height: 100%;
     }
 }
