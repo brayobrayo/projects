@@ -67,6 +67,7 @@ nav-button{
   background-color: white;
   color:blue;
   border-radius: 10px;
+    margin:1px;
 }
 section {
     display: none;
