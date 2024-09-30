@@ -62,7 +62,13 @@ label {
     width: 100%;
     align-items: center;
 }
-
+nav-button{
+  padding: 10px;
+  background-color: white;
+  color:blue;
+  border-radius: 10px;
+  margin:10px;
+}
 section {
     display: none;
     margin: 10px;
