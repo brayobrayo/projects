@@ -2,6 +2,8 @@ body {
     background-image: url(image1.png);
     background-repeat: no-repeat;
      background-size: cover; 
+    max-width: 100%;
+    height: auto;
 }
 
 .container {
