@@ -1,14 +1,15 @@
 body {
     background-image: url(image1.png);
     background-repeat: no-repeat;
-     background-size: cover; 
-    max-width: 100%;
-    height: auto;
+    background-size: cover;
+    margin: 0;
+    height: 100vh; /* Ensure body covers the full height */
 }
 
 .container {
     display: flex;
     justify-content: center;
+    align-items: center; /* Center items vertically */
     height: 100%;
     text-align: center;
 }
@@ -28,28 +29,18 @@ input[type="tel"] {
     padding: 10px;
     border-radius: 20px;
     margin-bottom: 20px;
-    color: white;
+    color: black; /* Change to black for visibility */
     background-color: yellowgreen;
 }
 
 button {
     background-color: yellowgreen;
-    width: 200px;
+    width: 100%; /* Make buttons full width */
     border-radius: 100px;
     color: rgb(14, 41, 196);
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-nav-button {
-    background-color: white;
-    width: 200px;
-    border-radius: 10px;
-    color: rgb(14, 41, 196);
-    padding: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin: 10px;
 }
 
 button:hover {
@@ -59,16 +50,7 @@ button:hover {
 label {
     margin-bottom: 10px;
     color: blue;
-    display: block; /* new content starts in next line */
-}
-.nav-links1,
-.nav-links2 {
-    color: white; /* Text color */
-    text-decoration: none; /* Remove underline */
-    padding: 10px 15px; /* Add padding to buttons */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth background color transition */
-    margin: 0 10px; /* Space between buttons */
+    display: block;
 }
 
 .nav-bar {
@@ -77,7 +59,6 @@ label {
     border-radius: 20px;
     background-color: yellowgreen;
     padding: 10px;
-    padding-bottom: 5px;
     width: 100%;
     align-items: center;
 }
@@ -86,7 +67,7 @@ section {
     display: none;
     margin: 10px;
     padding: 10px;
-    height: 100%;
+    height: calc(100% - 20px); /* Adjust height */
     width: 100%;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -100,5 +81,9 @@ section.active {
     .container {
         flex-direction: column;
         height: 100%;
+    }
+
+    button {
+        width: 90%; /* Responsive button width */
     }
 }
