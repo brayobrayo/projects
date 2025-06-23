@@ -184,8 +184,8 @@ section.active {
 
 /* When expanded, show down arrow */
 .caret.expanded .arrow::after {
-  content: "v";
-  transform: rotate(0deg);
+  content: ">";
+  transform: rotate(90deg);
 }
 
 .expanded .submenu {
