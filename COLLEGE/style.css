@@ -60,6 +60,7 @@ label {
     padding: 20px;
     width: 100%;
     align-items: center;
+    position: fixed;
 }
 nav-button{
   padding: 10px;
@@ -93,3 +94,102 @@ section.active {
         width: 90%; /* Responsive button width */
     }
 }
+.menu-icon {
+      width: 30px;
+      cursor: pointer;
+      margin: 20px;
+      position: relative;
+      top: 0;
+     left : 0;
+      z-index: 950;
+      
+    }
+   
+
+    .bar {
+      height: 4px;
+      width: 100%;
+      background-color: 
+      green;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+
+    /* Sidebar styles */
+    .sidebar {
+      height: relative;
+      width: 0;
+      position: relative;
+      top: 0;
+      left: 0;
+      background-color: red;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 900;
+      border-radius: 10px;
+    }
+    
+    .sidebar a {
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: violet;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: navy;
+    }
+
+    /* Active (animate hamburger icon) */
+    .menu-icon.active .bar1 {
+      transform: rotate(-45deg) translate(-6px, 6px);
+    }
+
+    .menu-icon.active .bar2 {
+      opacity: 0;
+    }
+
+    .menu-icon.active .bar3 {
+      transform: rotate(45deg) translate(-6px, -6px);
+    }
+    
+    /*submenu styles*/
+.submenu {
+  display: none;
+  background-color: #333;
+  padding-left: 20px;
+  border-radius: 20px;
+}
+
+.submenu li {
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.submenu li:hover {
+  background-color: #444;
+}
+
+/* Default arrow (right) */
+.caret .arrow::after {
+  content: ">";
+  font-size: 12px;
+  float: right;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* When expanded, show down arrow */
+.caret.expanded .arrow::after {
+  content: "v";
+  transform: rotate(0deg);
+}
+
+.expanded .submenu {
+display: block;
+}
+
+
