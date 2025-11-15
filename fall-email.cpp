@@ -81,3 +81,71 @@ void setup(){
     else
       Serial.println("\nConnected with no Auth.");
 void loop(){
+ sensors_event_t accel, gyro, temp;
+  mpu.getEvent(&accel, &gyro, &temp);
+
+  // Calculate total acceleration (magnitude)
+  float totalAccel = sqrt(
+    accel.acceleration.x * accel.acceleration.x +
+    accel.acceleration.y * accel.acceleration.y +
+    accel.acceleration.z * accel.acceleration.z
+  );
+
+  Serial.print("Accel: ");
+  Serial.println(totalAccel);  // Show acceleration for debugging
+
+  // Check for possible fall
+  if (totalAccel < FALL_THRESHOLD) {
+    if (!falling) {
+      falling = true;
+      fallStartTime = millis();
+    } 
+    else if (millis() - fallStartTime > FALL_DURATION) {
+      
+     if (!MailClient.sendMail(&smtp, &message, true))
+    Serial.println("Error sending Email, " + smtp.errorReason());
+      delay(2000);  // Show message for 2 seconds
+     
+      falling = false;  // Reset
+    }
+  } else {
+    // Normal state
+    if (falling) {
+      falling = false;  // Reset if acceleration returns
+    }
+   
+  }
+  delay(2000);  // Sa
+}
+void smtpCallback(SMTP_Status status){
+  /* Print the current status */
+  Serial.println(status.info());
+
+  /* Print the sending result */
+  if (status.success()){
+    Serial.println("----------------");
+    ESP_MAIL_PRINTF("Message sent success: %d\n", status.completedCount());
+    ESP_MAIL_PRINTF("Message sent failled: %d\n", status.failedCount());
+    Serial.println("----------------\n");
+    struct tm dt;
+
+    for (size_t i = 0; i < smtp.sendingResult.size(); i++){
+      /* Get the result item */
+      SMTP_Result result = smtp.sendingResult.getItem(i);
+      time_t ts = (time_t)result.timestamp;
+      localtime_r(&ts, &dt);
+
+      ESP_MAIL_PRINTF("Message No: %d\n", i + 1);
+      ESP_MAIL_PRINTF("Status: %s\n", result.completed ? "success" : "failed");
+      ESP_MAIL_PRINTF("Date/Time: %d/%d/%d %d:%d:%d\n", dt.tm_year + 1900, dt.tm_mon + 1, dt.tm_mday, dt.tm_hour, dt.tm_min, dt.tm_sec);
+      ESP_MAIL_PRINTF("Recipient: %s\n", result.recipients.c_str());
+      ESP_MAIL_PRINTF("Subject: %s\n", result.subject.c_str());
+    }
+    Serial.println("----------------\n");
+    
+    // You need to clear sending result as the memory usage will grow up.
+    smtp.sendingResult.clear();
+  }
+}
+
+
