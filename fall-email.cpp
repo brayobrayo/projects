@@ -24,6 +24,7 @@ void setup(){
    }
     else {
     Serial.println(F("MPU6050 Found!"));
+    }
     
     // Configure MPU6050 settings
     mpu.setAccelerometerRange(MPU6050_RANGE_8_G);
@@ -36,7 +37,7 @@ void setup(){
   Serial.print(F("Connecting to Wi-Fi"));
  while (WiFi.status() != WL_CONNECTED){
     Serial.print(".");
-    delay(300);
+    delay(300);}
   Serial.println();
   Serial.print(F("Connected with IP: "));
   Serial.println(WiFi.localIP());
@@ -74,12 +75,15 @@ void setup(){
     return;
   if (!smtp.isLoggedIn()){
     Serial.println("\nNot yet logged in.");
-   Serial.println("\nNot yet logged in.");
+  }
   else{
     if (smtp.isAuthenticated())
       Serial.println("\nSuccessfully logged in.");
     else
       Serial.println("\nConnected with no Auth.");
+  }
+  }
+ }
 void loop(){
  sensors_event_t accel, gyro, temp;
   mpu.getEvent(&accel, &gyro, &temp);
@@ -101,7 +105,7 @@ void loop(){
       fallStartTime = millis();
     } 
     else if (millis() - fallStartTime > FALL_DURATION) {
-      
+     SMTP_Message message;
      if (!MailClient.sendMail(&smtp, &message, true))
     Serial.println("Error sending Email, " + smtp.errorReason());
       delay(2000);  // Show message for 2 seconds
@@ -145,7 +149,5 @@ void smtpCallback(SMTP_Status status){
     
     // You need to clear sending result as the memory usage will grow up.
     smtp.sendingResult.clear();
-  }
+  }  
 }
-
-
