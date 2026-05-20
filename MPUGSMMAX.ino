@@ -9,18 +9,16 @@
 #include "MAX30105.h"
 #include "heartRate.h"
 
-#define MODEM_TX 3 
-#define MODEM_RX 2 
-#define SDA_MPU 6
-#define SCL_MPU 7
-#define SDA_MAX 5
-#define SCL_MAX 4
-
-const char* ssid     = "SUNFARMIG";
-const char* password = "Sun_Farming2024";
-
+#define MODEM_TX 19
+#define MODEM_RX 18
+#define SDA 5
+#define SCL 4
 #define SerialAT Serial1
 
+const char* ssid = "wifi";
+const char* password = "0112507198";
+const char targetNumber[] = "+254787352127"; 
+const char message[] = "Hello there, your loved one has experienced a fall. Attention needed";
 const float FALL_THRESHOLD = 0.4;     // g units
 const float IMPACT_THRESHOLD = 2.5;
 const long IR_FINGER_THRESHOLD = 50000;
@@ -163,24 +161,16 @@ void setup() {
   Serial.begin(115200);
   delay(1000);
   //wifi conncetion
-  WiFi.begin(ssid, password);
-
-    Serial.print("Connecting to WiFi");
-
-    while (WiFi.status() != WL_CONNECTED) {
-        delay(500);
-        Serial.print(".");
-    }
-
-    Serial.println();
-    Serial.println("WiFi Connected");
-
-    Serial.print("ESP32 IP Address: ");
-    Serial.println(WiFi.localIP());
-
+  Serial.println("Setting up Access Point..."); 
+  WiFi.mode(WIFI_AP);
+  WiFi.softAP(ssid, password);
+  IPAddress IP = WiFi.softAPIP();
+  Serial.print("Access Point IP Address: ");
+  Serial.println(IP);
+   //sserial and 12C communication starting
   Serial.println("Starting...");
   SerialAT.begin(115200, SERIAL_8N1, MODEM_RX, MODEM_TX);
-  Wire.begin(SDA_MPU, SCL_MPU, SDA_MAX, SCL_MAX);
+  Wire.begin(SDA, SCL);
   delay(3000);
   //starting gsm
   Serial.println("Testing AT...");
@@ -195,7 +185,7 @@ void setup() {
 //starting mpu
   Serial.println("Initializing MPU...");
 
-  mpu.begin();
+ mpu.begin();
   mpu.calcGyroOffsets(true);
 
   Serial.println("MPU6050 Ready!");
@@ -212,7 +202,10 @@ void setup() {
   
   if (reg != 1 && reg != 5) {
     Serial.println("Network registration failed!");
-    return;
+    while (true) {
+  Serial.println("Retrying network...");
+  delay(2000);
+}
   }
   Serial.println("Registered on network!");
 
@@ -353,8 +346,14 @@ void loop() {
 //alert mechanism
 void triggerAlert() {
   Serial.println("!!! FALL CONFIRMED !!!");
+  //send sms
+  if (modem.sendSMS(targetNumber, message)) {
+    Serial.println("SMS sent successfully!");
+  } else {
+    Serial.println("SMS failed to send.");}
+  //make a call
    Serial.println("Dialing +254787352127...");
-  if (modem.callNumber("+254787352127")) {
+  if (modem.callNumber(targetNumber)) {
     Serial.println("Call connected!");
     delay(30000); 
     modem.callHangup();
